@@ -2,13 +2,11 @@
 
 GitHub Pagesに公開できる、720×720 MP4（H.264）ブラウザ変換ツールです。
 
-## 公開方法
+## 公開
 
-1. GitHubで新規リポジトリを作成します（例: `square-video-converter`）。
-2. このフォルダの `index.html`、`style.css`、`app.js` をリポジトリ直下にアップロードします。
-3. Settings → Pages → Build and deployment → Deploy from a branch を選択します。
-4. Branch を `main`、フォルダを `/(root)` にして Save を押します。
-5. `https://ユーザー名.github.io/square-video-converter/` でアクセスできます。
+`main` への push で、GitHub Actions（`.github/workflows/pages.yml`）が GitHub Pages にデプロイします。
+
+https://kwu-cms.github.io/Square-Video-Converter/
 
 ## 動作
 
