@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Square Video Converter | 720 × 720 MP4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><div class="shell header-inner"><div class="mark">▣</div><div><div class="brand">Square Video Converter</div><div class="subbrand">720 × 720 MP4 変換ツール</div></div><span class="tag">BROWSER TOOL</span></div></header>
+<main class="shell">
+  <div class="lead"><h1>動画を、正方形のMP4に。</h1><p>動画を読み込み、展示やデジタルサイネージ向けの <strong>720 × 720 / H.264</strong> に変換します。動画はサーバーにアップロードされません。</p></div>
+  <div class="columns"><section class="panel"><div class="panel-heading"><span class="count">01</span><h2>変換設定</h2></div>
+    <div class="panel-content"><label for="file" class="input-label">動画ファイル</label><div id="drop" class="drop"><div class="drop-icon">↥</div><strong>動画をドロップ</strong><span>またはクリックしてファイルを選択</span><small>MP4 / MOV / WebM など（対応形式はブラウザによります）</small><input type="file" id="file" accept="video/*,.mov,.mkv" aria-label="動画ファイルを選択"></div><div id="fileInfo" class="file-info" hidden></div>
+    <div class="field"><label for="fit">正方形への配置</label><select id="fit"><option value="contain">余白を追加（全体を表示）</option><option value="cover">中央を切り抜き（余白なし）</option><option value="stretch">引き伸ばし（縦横比を変更）</option></select></div>
+    <div class="field"><label for="background">余白の色</label><div class="inline"><input type="color" id="background" value="#000000"><span class="hint">「余白を追加」で使用</span></div></div>
+    <div class="two"><div class="field"><label for="fps">フレームレート</label><select id="fps"><option value="30">30 fps（推奨）</option><option value="24">24 fps</option><option value="60">60 fps</option></select></div><div class="field"><label for="quality">画質</label><select id="quality"><option value="23">標準（推奨）</option><option value="19">高画質</option><option value="28">軽量</option></select></div></div>
+    <label class="check"><input type="checkbox" id="mute" checked><span>音声を削除する（展示用に推奨）</span></label>
+    <div class="spec"><span>出力形式</span><strong>MP4 · H.264 · 720 × 720 · yuv420p</strong></div>
+    <button class="primary" id="convert" disabled>変換を開始</button><button class="secondary" id="cancel" hidden>変換を中止</button>
+    <div class="progress-wrap" id="progressWrap" hidden><div class="progress-top"><span id="status">準備中</span><span id="percent">0%</span></div><progress id="progress" max="100" value="0"></progress><small>変換中はこのタブを閉じないでください。</small></div>
+    <div id="error" class="error" role="alert" hidden></div></div>
+  </section>
+  <section class="panel"><div class="panel-heading"><span class="count">02</span><h2>プレビュー</h2></div><div class="panel-content"><div class="preview" id="preview"><div class="placeholder" id="placeholder"><div class="placeholder-icon">▶</div><p>動画を選択すると<br>プレビューを表示します</p></div><video id="inputPreview" controls playsinline hidden></video></div><div class="preview-caption">変換前の動画 <span id="sourceDimensions">—</span></div><div id="result" class="result" hidden><h3>変換が完了しました</h3><video id="outputPreview" controls loop playsinline></video><a id="download" class="primary download" download="720x720.mp4">MP4をダウンロード ↓</a><p class="hint">720 × 720 / MP4（H.264）</p></div><div class="info-note"><strong>プライバシー</strong><p>動画の変換処理は、この端末のブラウザ上で行われます。変換のために動画ファイルをサーバーへ送信しません。</p></div></div></section></div>
+  <section class="about"><h2>アプリの使い方</h2><div class="steps"><div><span>1</span><h3>動画を追加</h3><p>変換したい動画を画面にドラッグ＆ドロップ、またはファイル選択します。</p></div><div><span>2</span><h3>出力を設定</h3><p>中央切り抜き・余白追加などを指定し、fpsと画質を選びます。</p></div><div><span>3</span><h3>変換・保存</h3><p>「変換を開始」を押して、完了後にMP4を保存します。</p></div></div><h3>利用上の注意</h3><p>初回実行時は変換エンジン（数十MB）をインターネットから読み込みます。ブラウザ内でFFmpegを動かすため、長時間・大容量の動画はメモリ不足になる場合があります。SafariよりChromeやEdgeの利用を推奨します。音声を残す場合はAAC形式に変換します。元ファイルは変更されません。</p><p>本ツールは教育・研究・展示制作向けの試作ツールです。重要な用途では変換後の動画を実機で確認してください。</p></section>
+</main><footer class="shell footer">Square Video Converter <span>Browser-based video utility</span></footer>
+<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.15/dist/umd/ffmpeg.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.12.2/dist/umd/index.js"></script>
+<script src="app.js"></script>
+</body></html>
