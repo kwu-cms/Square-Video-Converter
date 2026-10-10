@@ -23,7 +23,7 @@
   <section class="panel"><div class="panel-heading"><span class="count">02</span><h2>プレビュー</h2></div><div class="panel-content"><div class="preview" id="preview"><div class="placeholder" id="placeholder"><div class="placeholder-icon">▶</div><p>動画を選択すると<br>プレビューを表示します</p></div><video id="inputPreview" controls playsinline hidden></video></div><div class="preview-caption">変換前の動画 <span id="sourceDimensions">—</span></div><div id="result" class="result" hidden><h3>変換が完了しました</h3><video id="outputPreview" controls loop playsinline></video><a id="download" class="primary download" download="720x720.mp4">MP4をダウンロード ↓</a><p class="hint">720 × 720 / MP4（H.264）</p></div><div class="info-note"><strong>プライバシー</strong><p>動画の変換処理は、この端末のブラウザ上で行われます。変換のために動画ファイルをサーバーへ送信しません。</p></div></div></section></div>
   <section class="about"><h2>アプリの使い方</h2><div class="steps"><div><span>1</span><h3>動画を追加</h3><p>変換したい動画を画面にドラッグ＆ドロップ、またはファイル選択します。</p></div><div><span>2</span><h3>出力を設定</h3><p>中央切り抜き・余白追加などを指定し、fpsと画質を選びます。</p></div><div><span>3</span><h3>変換・保存</h3><p>「変換を開始」を押して、完了後にMP4を保存します。</p></div></div><h3>利用上の注意</h3><p>初回実行時は変換エンジン（数十MB）をインターネットから読み込みます。ブラウザ内でFFmpegを動かすため、長時間・大容量の動画はメモリ不足になる場合があります。SafariよりChromeやEdgeの利用を推奨します。音声を残す場合はAAC形式に変換します。元ファイルは変更されません。</p><p>本ツールは教育・研究・展示制作向けの試作ツールです。重要な用途では変換後の動画を実機で確認してください。</p></section>
 </main><footer class="shell footer">Square Video Converter <span>Browser-based video utility</span></footer>
-<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.15/dist/umd/ffmpeg.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.12.2/dist/umd/index.js"></script>
+<script src="vendor/ffmpeg.js"></script>
+<script src="vendor/util.js"></script>
 <script src="app.js"></script>
 </body></html>
