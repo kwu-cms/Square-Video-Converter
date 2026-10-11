@@ -1,6 +1,6 @@
-# Square Video Converter
+# HyperPixel 4.0 Square 動画変換
 
-GitHub Pagesに公開できる、720×720 MP4（H.264）ブラウザ変換ツールです。
+[HyperPixel 4.0 Square](https://www.switch-science.com/products/5901)（Raspberry Pi用高解像度ディスプレイ）向けの動画変換ツールです。ブラウザで動作し、動画はアップロードされません。
 
 ## 公開
 
